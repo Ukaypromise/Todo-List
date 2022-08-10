@@ -14,7 +14,6 @@ body {
   background-color: white;
   margin: 8rem auto;
   max-width: 600px;
-  height: 500px;
   grid-auto-rows: auto;
   cursor: pointer;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
