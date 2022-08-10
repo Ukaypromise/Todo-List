@@ -1,17 +1,17 @@
-let todos = [
+const todos = [
   {
     id: 1,
-    text: "Take out the trash",
+    text: 'Take out the trash',
     isCompleted: true,
   },
   {
     id: 2,
-    text: "Fix my old car",
+    text: 'Fix my old car',
     isCompleted: false,
   },
   {
     id: 3,
-    text: "Visit my friend",
+    text: 'Visit my friend',
     isCompleted: true,
   },
 ];

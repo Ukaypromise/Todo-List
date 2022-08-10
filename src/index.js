@@ -1,9 +1,6 @@
-import _ from "lodash";
-import "./style.css";
-import showTodo from "../modules/showTodo.js";
+import './style.css';
+import showTodo from '../modules/showTodo.js';
 
-
-window.addEventListener("DOMContentLoaded", () => {
+window.addEventListener('DOMContentLoaded', () => {
   showTodo();
- 
 });
