@@ -2,26 +2,43 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!-- Link to FontAwesome page -->
+    <link rel="stylesheet" href="style.css" />
     <link
       rel="stylesheet"
       href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"
       integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay"
       crossorigin="anonymous"
     />
-
-    <title>TODO LIST</title>
+    <title>Document</title>
+    
   </head>
   <body>
-    <div class="container">
-      <h1 id="title"><span>Today's To Do</span><i class="fas fa-sync"></i></h1>
-      <div class="input-container">
-        <input type="text" placeholder="Add to your list...." id="input-item" />
-        <i id="icon" class="fas fa-hand-point-left"></i>
-      </div>
-      <ul class="todo-list"></ul>
-      <button type="submit" id="btn-clear">Clear All Completed</button>
-    </div>
+    <main>
+      <section class="list-div">
+        <div class="title">
+          <h1>Today's To Do</h1>
+          <span><i class="fas fa-sync"></i></span>
+        </div>
+        <div class="input-text">
+          <form id="form">
+            <input
+              type="text"
+              name="tasks"
+              placeholder="Add to your list"
+              class="insert-text"
+            />
+          </form>
+        </div>
+        <ul class="list-container">
+          
+        </ul>
+        <div class="clear-elements">
+          <button class="clear-btn" type="submit">Clear all completed</button>
+        </div>
+      </section>
+    </main>
+    <script src="index.js"></script>
   </body>
 </html>
