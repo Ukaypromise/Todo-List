@@ -47,6 +47,8 @@ i {
   opacity: 50%;
 }
 
+
+
 #input-item {
   width: 100%;
   padding: 1.375rem;
@@ -68,22 +70,6 @@ i {
   list-style: none;
 }
 
-.todo-list li {
-  list-style: none;
-  color: black;
-  font-size: 1.125rem;
-  display: flex;
-  gap: 1.25rem;
-  padding: 1.25rem;
-  border-bottom: 1px solid rgba(128, 128, 128, 0.164);
-  
-  position: relative;
-}
-
-.todo-list li i {
-  margin-left: auto;
-}
-
 #btn-clear {
   border: none;
   width: 100%;
@@ -92,17 +78,47 @@ i {
   cursor: pointer;
   font-size: 1rem;
 }
-.delete{
-  display: none;
-  position: absolute;
-  right: 30px;
+
+
+.li-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 10px;
+  border-bottom: solid 1px #c0c0c0;
 }
 
-.delete.active{
-  display: block;
-  
+.li-wrapper input[type="checkbox"] {
+  width: 15px;
+  height: 15px;
 }
 
-.todo-list li i.active {
+.li-wrapper input[type="text"] {
+  border: none;
+  outline: none;
+  font-family: fantasy;
+  width: 100%;
+  font-weight: 200;
+  font-size: 1.2rem;
+}
+
+.clear-elements {
+  padding: 15px 0;
+  text-align: center;
+  background-color: #dedede;
+  color: #757575;
+}
+
+button {
+  background: none;
+  color: inherit;
+  border: none;
+  padding: 0;
+  font: inherit;
+  cursor: pointer;
+  outline: inherit;
+}
+
+.display-none {
   display: none;
 }
