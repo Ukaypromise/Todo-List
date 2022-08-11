@@ -76,6 +76,8 @@ i {
   gap: 1.25rem;
   padding: 1.25rem;
   border-bottom: 1px solid rgba(128, 128, 128, 0.164);
+  
+  position: relative;
 }
 
 .todo-list li i {
@@ -89,4 +91,18 @@ i {
   color: rgba(128, 128, 128, 0.622);
   cursor: pointer;
   font-size: 1rem;
+}
+.delete{
+  display: none;
+  position: absolute;
+  right: 30px;
+}
+
+.delete.active{
+  display: block;
+  
+}
+
+.todo-list li i.active {
+  display: none;
 }
