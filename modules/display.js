@@ -1,30 +1,30 @@
-import data from "./data.js";
-import { list } from "./domElement";
+import data from './data.js';
+import { list } from './domElement.js';
 
 const display = () => {
-  list.innerHTML = "";
+  list.innerHTML = '';
   data.todos.forEach((todo) => {
-    const li = document.createElement("li");
-    const checked = document.createElement("input");
-    const text = document.createElement("input");
-    const menuIcon = document.createElement("span");
-    const deleteIcon = document.createElement("span");
-    li.setAttribute("class", "li-wrapper");
-    checked.type = "checkbox";
-    checked.name = "task-done";
+    const li = document.createElement('li');
+    const checked = document.createElement('input');
+    const text = document.createElement('input');
+    const menuIcon = document.createElement('span');
+    const deleteIcon = document.createElement('span');
+    li.setAttribute('class', 'li-wrapper');
+    checked.type = 'checkbox';
+    checked.name = 'task-done';
     checked.checked = false;
     checked.id = todo.index;
-    text.type = "text";
-    text.name = "task";
+    text.type = 'text';
+    text.name = 'task';
     text.value = todo.description;
     text.id = todo.index;
     text.disabled = true;
-    text.style.cursor = "pointer";
-    text.style.background = "none";
-    text.style.color = "black";
+    text.style.cursor = 'pointer';
+    text.style.background = 'none';
+    text.style.color = 'black';
     menuIcon.innerHTML = '<i class="fas fa-ellipsis-v " for="select"></i>';
     deleteIcon.innerHTML = `<i class="fas fa-trash-alt" id="${todo.index}"></i>`;
-    deleteIcon.style.display = "none";
+    deleteIcon.style.display = 'none';
     li.appendChild(checked);
     li.appendChild(text);
     li.appendChild(menuIcon);
@@ -32,7 +32,7 @@ const display = () => {
     list.appendChild(li);
     if (todo.completed === true) {
       checked.checked = true;
-      text.style.textDecoration = "line-through";
+      text.style.textDecoration = 'line-through';
     }
 
     const deleteTodo = (e) => {
@@ -50,13 +50,13 @@ const display = () => {
 
         return todo;
       });
-      localStorage.setItem("todos", JSON.stringify(data.todos));
+      localStorage.setItem('todos', JSON.stringify(data.todos));
       e.target.parentElement.parentElement.remove();
     };
 
     const changeTodoValue = (e, text) => {
       const textId = e.target.id;
-      if (e.key === "Enter") {
+      if (e.key === 'Enter') {
         data.todos = data.todos.map((todo) => {
           if (Number(textId) === todo.index) {
             return {
@@ -68,28 +68,28 @@ const display = () => {
 
           return todo;
         });
-        localStorage.setItem("todos", JSON.stringify(data.todos));
+        localStorage.setItem('todos', JSON.stringify(data.todos));
         display();
       }
     };
 
-    menuIcon.addEventListener("click", () => {
-      deleteIcon.style.display = "block";
-      menuIcon.style.display = "none";
+    menuIcon.addEventListener('click', () => {
+      deleteIcon.style.display = 'block';
+      menuIcon.style.display = 'none';
       text.disabled = false;
-      text.style.background = "#f1f5f9";
+      text.style.background = '#f1f5f9';
 
-      text.addEventListener("keydown", (e) => changeTodoValue(e, text));
+      text.addEventListener('keydown', (e) => changeTodoValue(e, text));
     });
 
-    deleteIcon.addEventListener("click", (e) => deleteTodo(e));
+    deleteIcon.addEventListener('click', (e) => deleteTodo(e));
 
-    checked.addEventListener("change", (e) => {
+    checked.addEventListener('change', (e) => {
       const taskId = e.target.id;
-      if (text.style.textDecoration === "line-through") {
-        text.style.textDecoration = "";
+      if (text.style.textDecoration === 'line-through') {
+        text.style.textDecoration = '';
       } else {
-        text.style.textDecoration = "line-through";
+        text.style.textDecoration = 'line-through';
       }
 
       data.todos = data.todos.map((todo) => {
@@ -103,7 +103,7 @@ const display = () => {
 
         return todo;
       });
-      localStorage.setItem("todos", JSON.stringify(data.todos));
+      localStorage.setItem('todos', JSON.stringify(data.todos));
     });
   });
   // }

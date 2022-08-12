@@ -1,6 +1,6 @@
 /* eslint-disable no-plusplus */
-import data from "./data.js";
-import display from "./display.js";
+import data from './data.js';
+import display from './display.js';
 
 const clearTodo = () => {
   let count = 1;
@@ -11,7 +11,7 @@ const clearTodo = () => {
     completed: todo.completed,
     index: count++,
   }));
-  localStorage.setItem("todos", JSON.stringify(data.todos));
+  localStorage.setItem('todos', JSON.stringify(data.todos));
   display();
 };
 

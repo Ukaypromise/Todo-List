@@ -28,7 +28,6 @@ i {
   box-shadow: 5px 5px 50px 0 rgba(0, 0, 0, 0.02);
   border-radius: 10px;
   padding: 20px;
-
 }
 
 .title {
@@ -40,8 +39,6 @@ i {
   font-weight: 700;
   border-bottom: solid 1px #c0c0c0;
 }
-
-
 
 #form {
   display: flex;
