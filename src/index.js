@@ -107,7 +107,24 @@ const addTodo = (e) => {
   display();
 };
 
+const clearTodo = () => {
+  let count = 1;
+  todos.filter((todo) => todo.completed !== true);
+
+  todos.map((todo) => ({
+    description: todo.description,
+    completed: todo.completed,
+    index: count++,
+  }));
+  localStorage.setItem("todos", JSON.stringify(todos));
+  display();
+};
+
+const clear = document.querySelector(".clear-btn");
+clear.addEventListener("click", clearTodo);
+
 form.addEventListener('submit', (e) => addTodo(e));
+
 
 if (localStorage.getItem('todos')) {
   todos = JSON.parse(localStorage.getItem('todos'));
