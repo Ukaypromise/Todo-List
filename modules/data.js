@@ -1,5 +1,5 @@
-const todoData = {
+const data = {
   todos: [],
 };
 
-export default todoData;
+export default data;
