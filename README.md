@@ -13,6 +13,10 @@
 - Git
 
 
+## Live Demo
+Take a peep: [Todo List](https://ukaypromise.github.io/Todo-List/dist/)
+![demo-todo](https://user-images.githubusercontent.com/85847249/184724911-a767919f-1ad1-4d33-9579-d2e3a748dcfd.png)
+
 ## Getting Started
 
 In order to run this project on your computer, please make sure that you have a web browser installed. You can clone the repo to your machine.
